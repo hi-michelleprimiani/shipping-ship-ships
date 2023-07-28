@@ -16,8 +16,73 @@ const database = {
     { id: 14, location: "Port Klang, Malaysia", volume: "17.9" },
     { id: 15, location: "Jebel Ali, UAE", volume: "10.3" },
   ],
+  haulers: [
+    {
+      id: 1,
+      name: "Pioneering Spirit",
+      dockId: 4,
+    },
+    {
+      id: 2,
+      name: "Celestial Hauler",
+      dockId: 6,
+    },
+    {
+      id: 3,
+      name: "Nebula Voyager",
+      dockId: 7,
+    },
+    {
+      id: 4,
+      name: "WarpLift Transporter",
+      dockId: 1,
+    },
+    {
+      id: 5,
+      name: "Quantum Express",
+      dockId: 3,
+    },
+    {
+      id: 6,
+      name: "Hyperflux Haulstar",
+      dockId: 8,
+    },
+    {
+      id: 7,
+      name: "Transcendence Transporter",
+      dockId: 5,
+    },
+    {
+      id: 9,
+      name: "LunarHauler",
+      dockId: 2,
+    },
+    {
+      id: 10,
+      name: "SolarWinds Carrier",
+      dockId: 8,
+    },
+  ],
+  shippingShips: [
+    { id: 1, name: "StarGlider-IX", haulerId: 2 },
+    { id: 2, name: "QuantumHauler", haulerId: 3 },
+    { id: 3, name: "HyperNovaCarrier", haulerId: 1 },
+    { id: 4, name: "AeroTechVoyager", haulerId: 5 },
+    { id: 5, name: "MagLevMegaFreighter", haulerId: 4 },
+    { id: 6, name: "NovaCarrier X-14", haulerId: 7 },
+    { id: 7, name: "AstroFreighter Prime", haulerId: 6 },
+    { id: 8, name: "WarpLift Transporter", haulerId: 9 },
+  ],
 };
 
 export const getDocks = () => {
   return database.docks.map((docks) => ({ ...docks }));
+};
+
+export const getHaulers = () => {
+  return database.haulers.map((haulers) => ({ ...haulers }));
+};
+
+export const getShippingShips = () => {
+  return database.shippingShips.map((shippingShips) => ({ ...shippingShips }));
 };
