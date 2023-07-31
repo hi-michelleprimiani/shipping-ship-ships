@@ -65,10 +65,10 @@ const database = {
   ],
   shippingShips: [
     { id: 1, name: "StarGlider-IX", haulerId: 2 },
-    { id: 2, name: "QuantumHauler", haulerId: 3 },
+    { id: 2, name: "QuantumHauler", haulerId: 1 },
     { id: 3, name: "HyperNovaCarrier", haulerId: 1 },
     { id: 4, name: "AeroTechVoyager", haulerId: 5 },
-    { id: 5, name: "MagLevMegaFreighter", haulerId: 4 },
+    { id: 5, name: "MagLevMegaFreighter", haulerId: 5 },
     { id: 6, name: "NovaCarrier X-14", haulerId: 7 },
     { id: 7, name: "AstroFreighter Prime", haulerId: 6 },
     { id: 8, name: "WarpLift Transporter", haulerId: 9 },
