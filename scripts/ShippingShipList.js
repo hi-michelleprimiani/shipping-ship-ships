@@ -2,6 +2,9 @@ import { getShippingShips, getHaulers } from "./database.js";
 
 export const ShippingShipList = () => {
   const shippingShips = getShippingShips();
+
+  shippingShips.sort((a, b) => a.name.localeCompare(b.name));
+
   let shipsHTML = "<ul>Shipping Ships";
   for (const ship of shippingShips) {
     shipsHTML += `<li data-id="${ship.id}" data-haulerid="${ship.haulerId}" data-name="${ship.name}" data-type="shippingShips">${ship.name}</li>`;

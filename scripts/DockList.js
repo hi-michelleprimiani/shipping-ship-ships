@@ -3,6 +3,9 @@ import { getShippingShips, getHaulers } from "./database.js";
 
 export const DockList = () => {
   const docks = getDocks();
+
+  docks.sort((a, b) => a.location.localeCompare(b.location));
+
   let docksHTML = "<ul>";
   for (const dock of docks) {
     docksHTML += `<li data-type="dock" data-id="${dock.id}" data-location="${dock.location}">${dock.location} can hold ${dock.volume} tons of cargo</li>`;
@@ -34,9 +37,7 @@ document.addEventListener("click", (clickEvent) => {
     }
 
     if (dockedHaulers != "") {
-      window.alert(
-        `The ${dockLocation} dock is currently unloading ${dockedHaulers}`
-      );
+      window.alert(`The ${dock} dock is currently unloading ${dockedHaulers}`);
     } else {
       window.alert(`The ${dockLocation} dock is currently unloading nothing`);
     }
