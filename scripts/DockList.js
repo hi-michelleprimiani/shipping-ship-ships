@@ -1,5 +1,5 @@
 import { getDocks } from "./database.js";
-import { getShippingShips, getHaulers } from "./database.js";
+import { getHaulers } from "./database.js";
 
 export const DockList = () => {
   const docks = getDocks();
